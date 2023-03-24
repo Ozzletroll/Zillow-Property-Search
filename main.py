@@ -62,13 +62,18 @@ driver = webdriver.Chrome(service=service, options=options)
 for result in results_list:
     driver.get(GOOGLE_FORM_URL)
     time.sleep(1)
-    address_entry = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child("
-                                                         "1) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > "
-                                                         "div.Xb9hP > input")
+    address_entry = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > "
+                                                         "div:nth-child(1) > div > div > div.AgroKb > div > "
+                                                         "div.aCsJod.oJeWuf > div > div.Xb9hP > input")
     address_entry.send_keys(result["address"])
-    price_entry = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(2) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input")
+    price_entry = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > "
+                                                       "div:nth-child(2) > div > div > div.AgroKb > div > "
+                                                       "div.aCsJod.oJeWuf > div > div.Xb9hP > input")
     price_entry.send_keys(result["price"])
-    url_entry = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(3) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input")
+    url_entry = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child("
+                                                     "3) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > "
+                                                     "div.Xb9hP > input")
     url_entry.send_keys(result["url"])
-    submit = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div > span > span")
+    submit = driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb "
+                                                  "> div.lRwqcd > div > span > span")
     submit.click()
